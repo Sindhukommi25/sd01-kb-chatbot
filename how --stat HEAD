@@ -1,0 +1,68 @@
+[33mcommit 1d7a8f0d75c43e3b90fa676eb3700530c29761c1[m
+Author: Sindhu <ksindhu903@gmail.com>
+Date:   Mon Jun 15 13:25:05 2026 +0530
+
+    Remove venv and add gitignore
+
+ Makefile                                           |   7 [32m+[m
+ README.md                                          | 161 [32m++++++++++[m
+ ai_usage_note.md                                   |  85 [32m+++++[m
+ app_backup.py                                      | 344 [32m+++++++++++++++++++++[m
+ backend/.env                                       |   1 [32m+[m
+ backend/app/api/endpoints.py                       | 145 [32m+++++++++[m
+ backend/app/api/schemas.py                         |  24 [32m++[m
+ backend/app/core/config.py                         | 149 [32m+++++++++[m
+ backend/app/data/chroma_db/chroma.sqlite3          | Bin [31m0[m -> [32m147456[m bytes
+ backend/app/data/tickets.csv                       |   1 [32m+[m
+ backend/app/main.py                                |  18 [32m++[m
+ backend/app/outputs/escalated_tickets.csv          |   1 [32m+[m
+ backend/app/services/embeddings.py                 |  21 [32m++[m
+ backend/app/services/llm_helper.py                 | 219 [32m+++++++++++++[m
+ backend/app/services/rag_engine.py                 |  96 [32m++++++[m
+ backend/app/services/ticket_handler.py             | 220 [32m+++++++++++++[m
+ backend/data/chroma_db_test/chroma.sqlite3         | Bin [31m0[m -> [32m147456[m bytes
+ backend/data/faiss_index.bin                       | Bin [31m0[m -> [32m147501[m bytes
+ backend/data/faiss_metadata.pkl                    | Bin [31m0[m -> [32m32341[m bytes
+ backend/data/kb/kb01_password_self_service.md      |  19 [32m++[m
+ backend/data/kb/kb02_password_expired.md           |  16 [32m+[m
+ backend/data/kb/kb03_vpn_install_forticlient.md    |  23 [32m++[m
+ backend/data/kb/kb04_vpn_troubleshooting.md        |  19 [32m++[m
+ backend/data/kb/kb05_outlook_profile_config.md     |  17 [32m+[m
+ backend/data/kb/kb06_outlook_shared_mailbox.md     |  19 [32m++[m
+ backend/data/kb/kb07_printer_network_setup.md      |  19 [32m++[m
+ backend/data/kb/kb08_printer_offline_jam.md        |  17 [32m+[m
+ backend/data/kb/kb09_mfa_enrollment_setup.md       |  18 [32m++[m
+ backend/data/kb/kb10_mfa_new_device.md             |  16 [32m+[m
+ backend/data/kb/kb11_laptop_refresh_request.md     |  16 [32m+[m
+ backend/data/kb/kb12_laptop_migration_guide.md     |  18 [32m++[m
+ backend/data/kb/kb13_software_company_portal.md    |  16 [32m+[m
+ backend/data/kb/kb14_software_admin_privileges.md  |  17 [32m+[m
+ backend/data/kb/kb15_email_forwarding_rules.md     |  20 [32m++[m
+ backend/data/kb/kb16_email_forwarding_external.md  |  15 [32m+[m
+ backend/data/kb/kb17_teams_av_troubleshooting.md   |  17 [32m+[m
+ backend/data/kb/kb18_teams_clear_cache.md          |  19 [32m++[m
+ backend/data/kb/kb19_wifi_office_connection.md     |  15 [32m+[m
+ backend/data/kb/kb20_wifi_home_trouble.md          |  16 [32m+[m
+ backend/data/kb/outlook_setup.md                   |  18 [32m++[m
+ backend/data/kb/password_reset.md                  |  15 [32m+[m
+ backend/data/kb/printer_issue.md                   |  19 [32m++[m
+ backend/data/kb/vpn_setup.md                       |  22 [32m++[m
+ backend/data/tickets.csv                           |   9 [32m+[m
+ backend/outputs/chat_history.json                  | 128 [32m++++++++[m
+ backend/outputs/escalated_tickets.csv              |   9 [32m+[m
+ backend/requirements.txt                           |  12 [32m+[m
+ chatbot_ui_mockup.png                              | Bin [31m0[m -> [32m545010[m bytes
+ frontend/.env                                      |   1 [32m+[m
+ frontend/app.py                                    |  86 [32m++++++[m
+ .../__pycache__/analytics.cpython-313.pyc          | Bin [31m0[m -> [32m5742[m bytes
+ .../components/__pycache__/chat.cpython-313.pyc    | Bin [31m0[m -> [32m13500[m bytes
+ .../components/__pycache__/sidebar.cpython-313.pyc | Bin [31m0[m -> [32m5736[m bytes
+ frontend/components/analytics.py                   |  93 [32m++++++[m
+ frontend/components/chat.py                        | 192 [32m++++++++++++[m
+ frontend/components/sidebar.py                     |  67 [32m++++[m
+ frontend/requirements.txt                          |   3 [32m+[m
+ .../utils/__pycache__/api_client.cpython-313.pyc   | Bin [31m0[m -> [32m3150[m bytes
+ frontend/utils/api_client.py                       |  54 [32m++++[m
+ prompts.md                                         | 103 [32m++++++[m
+ tests/test_rag.py                                  | 244 [32m+++++++++++++++[m
+ 61 files changed, 2919 insertions(+)
